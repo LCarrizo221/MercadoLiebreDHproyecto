@@ -1,0 +1,476 @@
+* {
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 12px;
+}
+
+header {
+    background-color: #EAC926;
+    padding: 20px;
+    position: relative;
+}
+
+div.top-header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+header div.top-header p {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+header div.logo,
+header .form {
+    width: 50%;
+}
+
+header div.logo {
+    padding: 10px;
+}
+
+header .form {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-size: 11px;
+}
+
+header .form .input {
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+}
+
+header .form .submit {
+    font-size: 0.88rem;
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    width: 10%;
+}
+
+.toggleNavCheckbox {
+    display: none;
+}
+
+.burger-menu {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    padding: 10px;
+   
+}
+
+.burger-menu i {
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 15px rgb(45, 45, 45);
+    
+}
+.burger-menu i:hover{
+    background-color: #1259c3;
+}
+
+header nav {
+    display: none;
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+.toggleNavCheckbox:checked ~ nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navElements, .navInteractiveElements {
+    display: flex;
+    padding: 20px;
+    list-style-type: none;
+}
+
+.navElements {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.navInteractiveElements {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+header ul li {
+    margin-bottom: 10px;
+    padding: 2px;
+    box-sizing: content-box;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Media query para desktop */
+@media (min-width: 769px) {
+    .burger-menu {
+        display: none;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navElements, .navInteractiveElements {
+        flex-direction: row;
+    }
+
+    header ul li {
+        margin-left: 20px;
+        margin-bottom: 0;
+    }
+}
+
+div.last-visit,
+div.offers{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.price{
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount{
+    width: 70%;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.description{
+    color: #666;
+}
+
+.description{
+    display: none;
+    margin-top: 20px;
+}
+main section article:hover .description{
+    display:block;
+    margin-top: 20px;
+}
+main section article:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+section.banner img{
+    width: 100%;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    transition: 1s ease;
+}
+main section article:hover i {
+    transform: rotate(-90deg);
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
+article div.main-article:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 30px rgb(100, 100, 100);
+}
+
+footer {
+    padding-top: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+footer section {
+    margin-bottom: 30px;
+    transition: 1s;
+}
+footer section:hover i{
+    color: #8b83f5;
+}
+
+footer section i{
+    color: #1259c3;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+.footerFlexContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+@media (min-width: 769px){
+    .footerFlexContainer{
+        flex-direction: row;
+    }
+}
+    
+.Copyright{
+    display: flex;
+    align-items:start;
+    justify-content:flex-start;
+}
+
+@media (min-width: 361px){
+    main section article .description:hover{
+        display: block;
+    }
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section div.products article{
+        width: 45%;
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){
+    main section div.products article{
+        width: 22%;
+    }
+}
+
+
+
+
+/* Estilos base par formulario de registro */
+.register {
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.register form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register input[type="text"],
+.register input[type="email"],
+.register input[type="password"],
+.register input[type="date"],
+.register input[type="file"] {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.register h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.register .profile,
+.register .interests {
+    margin-bottom: 20px;
+}
+
+.register .interests div {
+    margin-bottom: 10px;
+}
+
+.register input[type="submit"],
+.register input[type="reset"] {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #1259c3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.register input[type="submit"]:hover,
+.register input[type="reset"]:hover {
+    background-color: #0022AA;
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .register {
+        width: 80%;
+    }
+}
+
+/* Estilos para pantallas grandes (desktops) */
+@media (min-width: 769px) {
+    .register {
+        width: 70%;
+    }
+
+    .register input[type="submit"],
+    .register input[type="reset"] {
+        width: auto;
+        padding: 10px 30px;
+    }
+
+    .register .profile,
+    .register .interests {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .register .interests div {
+        flex-basis: calc(50% - 10px);
+    }
+}
+
+
+.register label {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.register input[type="radio"],
+.register input[type="checkbox"] {
+    margin-right: 3px;
+}
+
+.register input:focus {
+    outline: 2px solid #1259c3;
+}
+
+.login{
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.login form{
+    display: flex;
+    flex-direction: column;
+}
+.login input[type="text"]:hover,
+.login input[type="password"]:hover{
+    background-color: #0022AA;
+}
+.boton:hover{
+    background-color: #5b5c5f;
+}
+.login input[type="text"],
+.login input[type="password"],
+.boton{
+    width: 100%;
+    margin-bottom: 20%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+
+.login input[type="submit"]{
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #1259c3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.login input[type="submit"]:hover{
+    background-color: #0022AA;
+}
