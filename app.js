@@ -1,4 +1,4 @@
-const PORT = 3030;
+const PORT = 3030 || process.env.PORT;
 const express = require('express');
 const app = express();
 app.use(express.static('public'));
